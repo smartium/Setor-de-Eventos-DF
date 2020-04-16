@@ -16,8 +16,25 @@ Template.hello.helpers({
 });
 
 Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+  'click #login'(e) {
+    if (Meteor.userId()) {
+      FlowRouter.go('/');
+      Meteor.logout();
+    }
+    else {
+      Meteor.loginWithGoogle({}, ()=> {
+        if (Meteor.user()) {
+          if (Meteor.user().profile.newUser) {
+            FlowRouter.go('/cadastro');
+          }
+          else {
+            FlowRouter.go('/contatos');
+          }
+        }
+        else {
+        FlowRouter.go('/');
+        }
+      });
+    }
+  }
 });

@@ -1,15 +1,30 @@
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+body {
   background-color: #eee;
   nav, footer {
-    background-color: #6a1b9a;
+    background-color: #6a1b9a !important;
+    color: #fff;
   }
-  // transition: $transition-effects;
+  // footer {
+  //   position: fixed;
+  //   bottom: 0px;
+  //   width: 100%;
+  // }
 
   @media (prefers-color-scheme: dark) {
     background-color: #414141;
     color: #fff;
     nav, footer {
-      background-color: #212121;
+      background-color: #212121 !important;
     }
     .card {
       background-color: rgba(255,255,255,0.2);
@@ -46,5 +61,95 @@ body {
         border-bottom: 1px solid rgba(255,255,255,0.2);;
       }
     }
+  }
+}
+
+textarea {
+  height: 9rem !important;
+}
+
+$base-color: #6a1b9a;
+
+.dropdown-content li span{
+  color: $base-color !important;
+}
+
+/* label color */
+.input-field label {
+  color: $base-color;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $base-color;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $base-color;
+  box-shadow: 0 1px 0 0 $base-color;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid $base-color;
+  box-shadow: 0 1px 0 0 $base-color;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid $base-color;
+  box-shadow: 0 1px 0 0 $base-color;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $base-color;
+}
+
+input[type="checkbox"].filled-in:checked + span:not(.lever):after,
+input[type="radio"]:checked + span:after,
+.btn {
+  background-color: $base-color !important;
+  border: $base-color;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  $base-color: #fff;
+
+  .input-field input, textarea {
+    color: $base-color;
+  }
+
+  /* label color */
+  .input-field label {
+    color: $base-color;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: $base-color;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid $base-color;
+    box-shadow: 0 1px 0 0 $base-color;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid $base-color;
+    box-shadow: 0 1px 0 0 $base-color;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid $base-color;
+    box-shadow: 0 1px 0 0 $base-color;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: $base-color;
+  }
+
+  input[type="checkbox"].filled-in:checked + span:not(.lever):after,
+  input[type="radio"]:checked + span:after,
+  .btn, .btn-floating, .material-icons, .fa {
+    background-color: $base-color !important;
+    // border: $base-color;
+    color: #000 !important;
   }
 }

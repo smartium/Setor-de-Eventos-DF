@@ -1,0 +1,92 @@
+<template name="userForm">
+  <form id="userForm">
+    {{#with user}}
+    <div class="row">
+      <div class="input-field col s12 m12">
+        <i class="material-icons prefix">home</i>
+        <input id="empresa" type="text" class="validate" value="{{empresa}}">
+        <label for="empresa">Empresa</label>
+      </div>
+
+      <div class="input-field col s12">
+        <i class="material-icons prefix">domain</i>
+        <select id="segmento">
+          <option value="" disabled selected>Escolha seu segmento principal...</option>
+          <option {{selected 'organizadora'}} value="organizadora">Produtora/Organizadora</option>
+          <option {{selected 'alimentos'}} value="alimentos">Alimentos & Bebidas</option>
+          <option {{selected 'equipamentos'}} value="equipamentos">Locação de equipamentos (áudio/vídeo/luz/informática)</option>
+          <option {{selected 'servicos'}} value="servicos">Serviços/Consultoria</option>
+          <option {{selected 'redes'}} value="redes">Internet e Redes lógicas</option>
+          <option {{selected 'software'}} value="software">Softwares/Credenciamento/Interatividade</option>
+          <option {{selected 'eletrica'}} value="eletrica">Elétrica e Grupos Geradores</option>
+          <option {{selected 'rh'}} value="rh">Recursos Humanos/Cerimonial/Recepção</option>
+          <option {{selected 'logistica'}} value="logistica">Logística/Transporte/Traslado</option>
+          <option {{selected 'seguranca'}} value="seguranca">Segurança/Brigada</option>
+          <option {{selected 'mobiliario'}} value="mobiliario">Mobiliário</option>
+          <option {{selected 'cenogarfia'}} value="cenogarfia">Cenografia/Decoração</option>
+          <option {{selected 'estrutura'}} value="estrutura">Estrutura</option>
+          <option {{selected 'local'}} value="local">Espaço (salões de festas / auditório / centro de convenções)</option>
+          <option {{selected 'industria'}} value="industria">Indústria/Comércio</option>
+          <option {{selected 'conteudo'}} value="conteudo">Conteúdo (design gráfico / edição de vídeo / motion / 3D)</option>
+          <option {{selected 'engenharia'}} value="engenharia">Engenharia/Arquitetura</option>
+        </select>
+        <label>Segmento de Atuação</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <i class="material-icons prefix">phone</i>
+        <input id="telefone" type="text" class="validate" value="{{telefone}}">
+        <label for="telefone">Telefone</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <i class="material-icons prefix">mail</i>
+        <input id="email" type="email" class="validate" value="{{email}}">
+        <label for="">Email Profissional</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <i class="material-icons prefix">assignment_ind</i>
+        <input id="cargo" type="text" class="validate" value="{{cargo}}">
+        <label for="cargo">Cargo/Função</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <div class="input-field col s6">
+          <label>
+            <input name="tipo" type="radio" {{tipo 'empresario'}} id="empresario" />
+            <span>Empresário</span>
+          </label>
+        </div>
+        <div class="input-field col s6">
+          <label>
+            <input name="tipo" type="radio" {{tipo 'funcionario'}} id="funcionario" />
+            <span>Funcionário</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-field col s12">
+        <div class="col s6">
+          <label>
+            <input type="checkbox" class="filled-in" {{checked responsavel}} id="responsavel"/>
+            <span>Eu respondo pela Empresa</span>
+          </label>
+        </div>
+        <div class="col s6">
+          <label>
+            <input type="checkbox" class="filled-in" {{checked publico}} id="publico"/>
+            <span>Perfil público</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-field col s12">
+        <i class="material-icons prefix">description</i>
+        <textarea id="descricao" class="materialize-textarea" data-length="500" value="{{descricao}}"></textarea>
+        <label for="descricao">Fale um pouco sobre Você e sua Empresa</label>
+      </div>
+    </div>
+    {{/with}}
+  </form>
+</template>
