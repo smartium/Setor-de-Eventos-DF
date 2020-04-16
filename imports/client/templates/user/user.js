@@ -30,6 +30,11 @@ Template.user.events({
       descricao: e.target.descricao.value,
     }
     Meteor.call('userForm', this._id, profile, false);
-    // FlowRouter.go('/contatos');
+    FlowRouter.go('/contatos');
+  },
+
+  'click #cancel'(e) {
+    e.preventDefault();
+    FlowRouter.go('/contatos');
   }
 });

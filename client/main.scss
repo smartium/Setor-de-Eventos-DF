@@ -147,7 +147,7 @@ input[type="radio"]:checked + span:after,
 
   input[type="checkbox"].filled-in:checked + span:not(.lever):after,
   input[type="radio"]:checked + span:after,
-  .btn, .btn-floating, .material-icons, .fa {
+  .btn, .btn-floating, .fa {
     background-color: $base-color !important;
     // border: $base-color;
     color: #000 !important;
