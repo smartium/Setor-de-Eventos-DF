@@ -18,8 +18,56 @@ Template.registerHelper(
     let result;
     switch (segment) {
       case 'organizadora':
-        result = 'Produtora/Organizadora';
-        break;
+      result = 'Produtora/Organizadora';
+      break;
+      case 'alimentos':
+      result = 'Alimentos & Bebidas';
+      break;
+      case 'equipamentos':
+      result = 'Locação de equipamentos (áudio/vídeo/luz/informática)';
+      break;
+      case 'servicos':
+      result = 'Serviços/Consultoria';
+      break;
+      case 'redes':
+      result = 'Internet e Redes lógicas';
+      break;
+      case 'software':
+      result = 'Softwares/Credenciamento/Interatividade';
+      break;
+      case 'eletrica':
+      result = 'Elétrica e Grupos Geradores';
+      break;
+      case 'rh':
+      result = 'Recursos Humanos/Cerimonial/Recepção';
+      break;
+      case 'logistica':
+      result = 'Logística/Transporte/Traslado';
+      break;
+      case 'seguranca':
+      result = 'Segurança/Brigada';
+      break;
+      case 'mobiliario':
+      result = 'Mobiliário';
+      break;
+      case 'cenografia':
+      result = 'Cenografia/Decoração';
+      break;
+      case 'estrutura':
+      result = 'Estrutura';
+      break;
+      case 'local':
+      result = 'Espaço (salões de festas / auditório / centro de convenções)';
+      break;
+      case 'industria':
+      result = 'Indústria/Comércio';
+      break;
+      case 'conteudo':
+      result = 'Conteúdo (design gráfico / edição de vídeo / motion / 3D)';
+      break;
+      case 'engenharia':
+      result = 'Engenharia/Arquitetura';
+      break;
       default:
     }
     return result;
@@ -42,7 +90,7 @@ rh'}} value="rh">Recursos Humanos/Cerimonial/Recepção
 logistica'}} value="logistica">Logística/Transporte/Traslado
 seguranca'}} value="seguranca">Segurança/Brigada
 mobiliario'}} value="mobiliario">Mobiliário
-cenogarfia'}} value="cenogarfia">Cenografia/Decoração
+cenografia'}} value="cenografia">Cenografia/Decoração
 estrutura'}} value="estrutura">Estrutura
 local'}} value="local">Espaço (salões de festas / auditório / centro de convenções)
 industria'}} value="industria">Indústria/Comércio
