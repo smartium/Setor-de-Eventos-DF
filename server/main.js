@@ -18,12 +18,14 @@ Meteor.methods({
         'profile.empresa': profile.empresa,
         'profile.segmento': profile.segmento,
         'profile.telefone': profile.telefone,
+        'profile.whatsapp': profile.whatsapp,
         'profile.email': profile.email,
         'profile.cargo': profile.cargo,
         'profile.tipo': profile.tipo,
         'profile.responsavel': profile.responsavel,
         'profile.publico': profile.publico,
         'profile.descricao': profile.descricao,
+        'profile.links': profile.links,
         'profile.updatedAt': new Date().valueOf(),
       }
     });

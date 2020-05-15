@@ -19,6 +19,7 @@ Template.user.events({
       empresa: e.target.empresa.value,
       segmento: e.target.segmento.value,
       telefone: e.target.telefone.value,
+      whatsapp: e.target.whatsapp.value,
       email: e.target.email.value,
       cargo: e.target.cargo.value,
       tipo: {
@@ -28,7 +29,13 @@ Template.user.events({
       responsavel: e.target.responsavel.checked,
       publico: e.target.publico.checked,
       descricao: e.target.descricao.value,
+      links: {
+        site: e.target.site.value,
+        instagram: e.target.instagram.value,
+        facebook: e.target.facebook.value
+      }
     }
+    console.log(e.target.instagram.value);
     Meteor.call('userForm', this._id, profile, false);
     FlowRouter.go('/contatos');
   },

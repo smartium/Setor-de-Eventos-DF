@@ -33,13 +33,19 @@
         <label>Segmento de Atuação</label>
       </div>
 
-      <div class="input-field col s12 m6">
+      <div class="input-field col s12 l4">
         <i class="material-icons prefix">phone</i>
         <input id="telefone" type="text" class="validate" value="{{telefone}}">
         <label for="telefone">Telefone</label>
       </div>
 
-      <div class="input-field col s12 m6">
+      <div class="input-field col s12 l4">
+        <i class="fa fa-whatsapp prefix"></i>
+        <input id="whatsapp" type="text" class="validate" value="{{whatsapp}}">
+        <label for="whatsapp">Whatsapp</label>
+      </div>
+
+      <div class="input-field col s12 l4">
         <i class="material-icons prefix">mail</i>
         <input id="email" type="email" class="validate" value="{{email}}">
         <label for="">Email Profissional</label>
@@ -85,6 +91,24 @@
         <i class="material-icons prefix">description</i>
         <textarea id="descricao" class="materialize-textarea" data-length="500" value="{{descricao}}"></textarea>
         <label for="descricao">Fale um pouco sobre Você e sua Empresa</label>
+      </div>
+
+      <div class="input-field col s12">
+        <i class="material-icons prefix">link</i>
+        <input id="site" type="text" class="validate" value="{{links.site}}">
+        <label for="site">Website</label>
+      </div>
+
+      <div class="input-field col s12 m12 l6">
+        <i class="fa fa-instagram prefix"></i>
+        <input id="instagram" type="text" class="validate" value="{{links.instagram}}">
+        <label for="instagram">https://www.instagram.com/</label>
+      </div>
+
+      <div class="input-field col s12 m12 l6">
+        <i class="fa fa-facebook prefix"></i>
+        <input id="facebook" type="text" class="validate" value="{{links.facebook}}">
+        <label for="facebook">https://www.facebook.com/</label>
       </div>
     </div>
     {{/with}}

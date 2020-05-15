@@ -5,6 +5,13 @@ FlowRouter.route('/', {
   }
 });
 
+FlowRouter.route('/card/:id', {
+  name: 'Card',
+  action() {
+    BlazeLayout.render('App_body', {main: 'card'});
+  }
+});
+
 FlowRouter.route('/info', {
   name: 'Info',
   action() {
