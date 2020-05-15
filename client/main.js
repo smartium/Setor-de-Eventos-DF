@@ -76,6 +76,16 @@ Template.registerHelper(
   }
 );
 
+Template.registerHelper(
+  'removeAtsign', (str)=> {
+    function remove_character(str_to_remove, str) {
+      let reg = new RegExp(str_to_remove)
+      return str.replace(reg, '')
+    }
+    return remove_character('@', str).toLowerCase();
+  }
+);
+
 Template.App_body.onRendered(()=> {
   $('.sidenav').sidenav();
 });

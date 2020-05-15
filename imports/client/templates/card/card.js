@@ -14,12 +14,17 @@ Template.card.helpers({
   },
 
   instagramFeed(username) {
+    function remove_character(str_to_remove, str) {
+      let reg = new RegExp(str_to_remove)
+      return str.replace(reg, '').toLowerCase()
+    }
+
     $(function () {
       $('#instagramImages').instagramFeed({
 
         //Feed Options
         feedData: 'user', // Feed source: user or tag
-        user: username, // Enter Instagram username to display its feed (displays up to 12 latest posts)
+        user: remove_character('@', remove_character('@', username)), // Enter Instagram username to display its feed (displays up to 12 latest posts)
         tag: 'eventosdf', // Enter Instagram hashtag to display its feed. Do not add # before the hashtag
         postsQuantity: '3', // Number of photos to display initially
 

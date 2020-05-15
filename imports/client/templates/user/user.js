@@ -15,6 +15,8 @@ Template.user.events({
   'submit form'(e) {
     e.preventDefault();
     let tipo = $('input[name=tipo]:checked');
+    let strInstagram = remove_character('@', e.target.instagram.value);
+    strInstagram = strInstagram.toLowerCase();
     profile = {
       empresa: e.target.empresa.value,
       nomeExibicao: e.target.nome_exibicao.value,
@@ -32,7 +34,7 @@ Template.user.events({
       descricao: e.target.descricao.value,
       links: {
         site: e.target.site.value,
-        instagram: e.target.instagram.value,
+        instagram: strInstagram,
         facebook: e.target.facebook.value
       }
     }
@@ -46,3 +48,8 @@ Template.user.events({
     FlowRouter.go('/contatos');
   }
 });
+
+function remove_character(str_to_remove, str) {
+  let reg = new RegExp(str_to_remove)
+  return str.replace(reg, '')
+}
