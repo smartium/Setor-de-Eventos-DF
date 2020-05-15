@@ -4,66 +4,71 @@
 
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        {{#with user}}
-        <div class="row">
-          <div class="col s12 center">
-            <h1>{{profile.empresa}}</h1>
-            <h3>{{detail profile.segmento}}</h3>
+  <div class="user-card">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          {{#with user}}
+          <div class="row">
+            <div class="col s12 center">
+              <h1>{{profile.empresa}}</h1>
+              <h4>{{detail profile.segmento}}</h4>
+            </div>
           </div>
-        </div>
 
 
 
-        <div class="row">
-          <div class="col s12 l8 offset-l2 center">
-            <img src="{{services.google.picture}}" alt="" class="circle responsive-img">
-            <h4>{{services.google.name}}</h4>
-            <h5>{{profile.cargo}}</h5>
+          <div class="row">
+            <div class="col s12 l8 offset-l2 center">
+              <!-- <img src="{{services.google.picture}}" alt="" class="circle responsive-img"> -->
+              <h4><img src="{{services.google.picture}}" alt="" class="circle avatar responsive-img"> {{services.google.name}} <small><i>- {{profile.cargo}}</i></small></h4>
+              <h5></h5>
+              {{#if profile.links.instagram}}
+              <center><div id="instagramImages"></div></center>
+              <button type="button" class="load-more-btn" name="button">MAIS</button>
+              {{instagramFeed profile.links.instagram}}
+              {{/if}}
+
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col s12 center links">
-            {{#if profile.telefone}}
-            <a target="_blank" href="callto:+55{{profile.telefone}}"><i class="medium fa fa-phone blue-text"></i></a>
-            {{/if}}
-            {{#if profile.whatsapp}}
-            <a href="https://wa.me/55{{profile.whatsapp}}"><i class="medium fa fa-whatsapp blue-text"></i></a>
-            {{/if}}
-            {{#if profile.email}}
-            <a target="_blank" href="mailto:{{profile.email}}"><i class="medium fa fa-envelope blue-text"></i></a>
-            {{/if}}
-            {{#if profile.links.site}}
-            <a target="_blank" href="{{profile.links.site}}"><i class="medium fa fa-link blue-text"></i></a>
-            {{/if}}
-            {{#if profile.links.instagram}}
-            <a target="_blank" href="https://instagram.com/{{profile.links.instagram}}"><i class="medium fa fa-instagram blue-text"></i></a>
-            {{/if}}
-            {{#if profile.links.facebook}}
-            <a target="_blank" href="https://facebook.com/{{profile.links.facebook}}"><i class="medium fa fa-facebook blue-text"></i></a>
-            {{/if}}
+          <div class="row">
+            <div class="col s12 center links">
+              {{#if profile.telefone}}
+              <a target="_blank" href="callto:+55{{profile.telefone}}"><i class="small fa fa-phone blue-text"></i></a>
+              {{/if}}
+              {{#if profile.whatsapp}}
+              <a href="https://wa.me/55{{profile.whatsapp}}"><i class="small fa fa-whatsapp blue-text"></i></a>
+              {{/if}}
+              {{#if profile.email}}
+              <a target="_blank" href="mailto:{{profile.email}}"><i class="small fa fa-envelope blue-text"></i></a>
+              {{/if}}
+              {{#if profile.links.site}}
+              <a target="_blank" href="{{profile.links.site}}"><i class="small fa fa-link blue-text"></i></a>
+              {{/if}}
+              {{#if profile.links.instagram}}
+              <a target="_blank" href="https://instagram.com/{{profile.links.instagram}}"><i class="small fa fa-instagram blue-text"></i></a>
+              {{/if}}
+              {{#if profile.links.facebook}}
+              <a target="_blank" href="https://facebook.com/{{profile.links.facebook}}"><i class="small fa fa-facebook blue-text"></i></a>
+              {{/if}}
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col s12 l8 offset-l2">
-            <div class="card">
-              <div class="card-content">
-                <span class="card-title">Bio</span>
-                <p>{{profile.descricao}}</p>
+          <div class="row">
+            <div class="col s12 l8 offset-l2">
+              <div class="card">
+                <div class="card-content">
+                  <span class="card-title">Bio</span>
+                  <p>{{profile.descricao}}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {{#if profile.links.instagram}}
-        <center><div id="instagramImages"></div></center>
-        {{instagramFeed profile.links.instagram}}
-        {{/if}}
-        {{/with}}
+
+          {{/with}}
+        </div>
       </div>
     </div>
   </div>
