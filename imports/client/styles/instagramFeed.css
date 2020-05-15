@@ -1,0 +1,103 @@
+#instagramImages {
+	min-width: 100px;
+}
+
+.instaImgBgr {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+}
+
+.instaWrap {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: bottom;
+	width: 150px;
+	height: 150px;
+}
+
+.instaOverlay {
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+.instaLikes {
+	font-size: calc(0.8vw + 0.8vh + 0.8vmin);
+}
+
+.instaComment {
+	font-size: calc(0.8vw + 0.8vh + 0.8vmin);
+}
+
+.instaDi {
+	display: inline-block;
+}
+
+.instagramImages .fa {
+	color: #fff;
+}
+
+.instaInfo {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.instaNumL {
+	float: right;
+	padding-top: 1px;
+}
+
+.instaNumR {
+	float: right;
+	padding-top: 3px;
+}
+
+.load-more-btn {
+	margin: 15px auto;
+	cursor: pointer;
+	text-align: center;
+	user-select: none;
+}
+
+.instaGapI {
+	height: 5px;
+	width: 7%;
+	display: inline-block;
+}
+
+.errorMessage {
+	z-index: 99999;
+	margin: 20px auto;
+	padding: 5px 20px;
+	background: #eee;
+	color: #f00;
+	font-size: 18px;
+	font-family: arial;
+	letter-spacing: 4px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+	.instaNumR {
+		float: right;
+		padding-top: 2px;
+	}
+	.errorMessage {
+		font-size: 12px !important;
+	}
+}

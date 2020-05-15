@@ -1,4 +1,9 @@
 <template name="card">
+
+
+
+
+
   <div class="container">
     <div class="row">
       <div class="col s12">
@@ -53,6 +58,11 @@
             </div>
           </div>
         </div>
+
+        {{#if profile.links.instagram}}
+        <center><div id="instagramImages"></div></center>
+        {{instagramFeed profile.links.instagram}}
+        {{/if}}
         {{/with}}
       </div>
     </div>
