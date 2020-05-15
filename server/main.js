@@ -16,6 +16,7 @@ Meteor.methods({
       $set: {
         'profile.newUser': isNewUser,
         'profile.empresa': profile.empresa,
+        'profile.nomeExibicao': profile.nomeExibicao,
         'profile.segmento': profile.segmento,
         'profile.telefone': profile.telefone,
         'profile.whatsapp': profile.whatsapp,

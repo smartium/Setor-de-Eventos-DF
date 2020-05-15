@@ -18,7 +18,17 @@
             {{#each users}}
             <tr>
               <td><img src="{{services.google.picture}}" class="circle"></td>
-              <td><big><strong>{{services.google.given_name}}</strong></big></td>
+              <td>
+                <big>
+                  <strong>
+                    {{#if profile.nomeExibicao}}
+                    {{profile.nomeExibicao}}
+                    {{else}}
+                    {{services.google.given_name}}
+                    {{/if}}
+                  </strong>
+                </big>
+              </td>
               <td>{{profile.empresa}}</td>
               <td>{{detail profile.segmento}}</td>
             </tr>

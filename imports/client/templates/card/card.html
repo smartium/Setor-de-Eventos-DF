@@ -21,7 +21,14 @@
           <div class="row">
             <div class="col s12 l8 offset-l2 center">
               <!-- <img src="{{services.google.picture}}" alt="" class="circle responsive-img"> -->
-              <h4><img src="{{services.google.picture}}" alt="" class="circle avatar responsive-img"> {{services.google.name}} <small><i>- {{profile.cargo}}</i></small></h4>
+              <h4>
+                <img src="{{services.google.picture}}" alt="" class="circle avatar responsive-img">
+                {{#if profile.nomeExibicao}}
+                {{profile.nomeExibicao}}
+                {{else}}
+                {{services.google.name}}
+                {{/if}}
+                <small><i>- {{profile.cargo}}</i></small></h4>
               <h5></h5>
               {{#if profile.links.instagram}}
               <center><div id="instagramImages"></div></center>

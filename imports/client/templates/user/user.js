@@ -17,6 +17,7 @@ Template.user.events({
     let tipo = $('input[name=tipo]:checked');
     profile = {
       empresa: e.target.empresa.value,
+      nomeExibicao: e.target.nome_exibicao.value,
       segmento: e.target.segmento.value,
       telefone: e.target.telefone.value,
       whatsapp: e.target.whatsapp.value,
