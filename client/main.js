@@ -12,6 +12,7 @@ import '../imports/client/templates/user/user';
 import '../imports/client/templates/card/card';
 import '../imports/client/templates/contacts_list/contacts';
 import '../imports/client/styles/instagramFeed.css';
+import 'animate.css';
 import '../imports/client/scripts/instagramFeed.min';
 import './main.html';
 

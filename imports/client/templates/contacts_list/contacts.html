@@ -1,6 +1,11 @@
 <template name="contacts">
-  <div class="container">
+
+  <div class="container animate__animated animate__fadeIn">
+    {{#if currentUser}}
     <h4>Contatos</h4>
+    {{else}}
+    <h4 class="center">Empresas fornecedoras<br />de produtos e serviços</h4>
+    {{/if}}
 
     <div class="row">
       <div class="col s12 l10 offset-l1">
@@ -37,11 +42,5 @@
         </table>
       </div>
     </div>
-
-
-
-
-
-
   </div>
 </template>

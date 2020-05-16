@@ -34,5 +34,5 @@ momentjs:moment
 #matb33:collection-hooks
 #http
 msavin:mongol
-fortawesome:fontawesome
+#fortawesome:fontawesome
 easy:search
