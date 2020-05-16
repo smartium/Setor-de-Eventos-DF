@@ -10,7 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "animate.css": "^4.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "materialize-css": "^1.0.0-rc.2",
     "meteor-node-stubs": "^1.0.0"
   },
